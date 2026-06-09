@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@theme {
+  --animate-float: float 6s ease-in-out infinite;
+  --font-sans: "Inter", "system-ui", "-apple-system", "sans-serif";
+  --font-serif: "Playfair Display", "serif";
+  --font-mono: "Fira Code", "monospace";
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  color: #fff;
+}
+
+[data-aos="skill-grow"] {
+  width: 0 !important;
+  transition-property: width;
+}
+
+[data-aos="skill-grow"].aos-animate {
+  width: var(--skill-width) !important;
+}
+
+/* Custom Utilities */
+.text-stroke-white {
+  -webkit-text-stroke: 1px white;
+}
+
+.text-stroke-black {
+  -webkit-text-stroke: 1px black;
+}
+
+@keyframes drop-bounce {
+  0% { transform: translateY(-100%) rotate(-3deg); opacity: 0; }
+  60% { transform: translateY(10%) rotate(2deg); }
+  80% { transform: translateY(-5%) rotate(-1deg); }
+  100% { transform: translateY(0) rotate(-3deg); opacity: 1; }
+}
+
+[data-aos="drop-bounce"] {
+  opacity: 0;
+}
+
+[data-aos="drop-bounce"].aos-animate {
+  animation: drop-bounce 1.5s ease-out forwards;
+}
