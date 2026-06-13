@@ -2,7 +2,7 @@ import React, { useRef, useEffect, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 // Adjusted import paths
-import heroVideo from '../assets/hero video/WhatsApp Video 2026-06-09 at 13.41.30.mp4';
+import heroVideo from '../assets/hero video/WhatsApp Video 2026-06-13 at 21.14.10.mp4';
 import heroThumbnail from '../assets/hero video/thumbnail.png';
 
 const Hero = () => {
